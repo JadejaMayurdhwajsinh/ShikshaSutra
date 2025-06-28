@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            text-align: center;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #1e40af;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        div > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn_insert {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .btn_update {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .btn_delete {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .btn_select {
+            background-color: #8b5cf6;
+            color: white;
+        }
+
+        .btn_insert:hover { background-color: #059669; }
+        .btn_update:hover { background-color: #2563eb; }
+        .btn_delete:hover { background-color: #dc2626; }
+        .btn_select:hover { background-color: #7c3aed; }
+
+        @media (max-width: 480px) {
+            div > div {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            div {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Menu</h1>
+            <div> 
+                <a href="{% url 'insert' %}"><button class="btn_insert" type="button">Insert</button></a>
+                <a href="{% url 'update' %}"><button class="btn_update" type="button">Update</button></a>
+                <a href="{% url 'delete' %}"><button class="btn_delete" type="button">Delete</button></a>
+                <a href="{% url 'select' %}"><button class="btn_select" type="button">Select</button></a>
+            </div>
+    </div>
+</body>
+</html>

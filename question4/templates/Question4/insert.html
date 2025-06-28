@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 8px 0 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus {
+            border-color: #60a5fa;
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+        }
+
+        input[type="submit"] {
+            background-color: #3b82f6;
+            color: white;
+            padding: 14px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2563eb;
+        }
+
+        /* Style text labels without modifying HTML */
+        form > *:not(input):not(br) {
+            font-size: 15px;
+            color: #4b5563;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        br {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/insert/" method="post">
+        <h2 style="text-align: center; display: block; font-size: xx-large;">Insert Record</h2>
+        {% csrf_token %}
+        Enter Roll Number : <input type="number" name="rollno"><br><br>
+        Enter Name : <input type="text" name="name"><br><br>
+        Enter Cmarks : <input type="number" name="Cmarks"><br><br>
+        Enter Cppmarks : <input type="number" name="Cppmarks"><br><br>
+        Enter Pymarks : <input type="number" name="Pymarks"><br><br>
+        <input type="submit" value="Insert Record">
+    </form>
+</body>
+</html>
