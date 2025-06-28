@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Django](https://img.shields.io/badge/Django-4.x-success)
-![Top Language](https://img.shields.io/github/languages/top/your-username/ShikshaSutra?logo=python&color=blue)
+
 
 **ShikshaSutra** (शिक्षा सूत्र) is a lightweight **Student Management System** built using **Python (Django)** as the backend and a fully custom **HTML + CSS** frontend.  
 It allows users to register, log in, and manage student records with full **CRUD** functionality – without using Django’s default admin panel.
